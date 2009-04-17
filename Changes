@@ -1,0 +1,21 @@
+POE::Component::IRC::Plugin::RSS::Headlines
+===========================================
+
+1.08	Fri Apr 17 22:33:17 BST 2009
+	- Import to git repo
+	- bump to stable release
+
+1.06	Tue May 13 10:50:34 BST 2008
+	- Added LICENSE information
+
+1.04	Fri Apr  4 14:02:58 BST 2008
+	- Kwalitee fixes.
+
+1.03	Thu Nov  1 12:03:11 GMT 2007
+	- Updated Module::Install to 0.68
+
+1.02	Sun Aug 05 11:11:11 BST 2006
+	- Fixed abstract_from and build_requires in Makefile.PL
+
+1.01	Fri Oct 20 17:30:46 BST 2006
+	- Initial Release
