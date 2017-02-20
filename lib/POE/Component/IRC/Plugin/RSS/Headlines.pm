@@ -1,5 +1,7 @@
 package POE::Component::IRC::Plugin::RSS::Headlines;
 
+#ABSTRACT: A POE::Component::IRC plugin that provides RSS headline retrieval.
+
 use strict;
 use warnings;
 use POE;
@@ -7,9 +9,6 @@ use POE::Component::Client::HTTP;
 use POE::Component::IRC::Plugin qw(:ALL);
 use XML::RSS;
 use HTTP::Request;
-use vars qw($VERSION);
-
-$VERSION = '1.08';
 
 sub new {
   my $package = shift;
@@ -32,7 +31,7 @@ sub PCI_register {
 	);
   }
   $self->{session_id} = POE::Session->create(
-	object_states => [ 
+	object_states => [
 	   $self => [ qw(_shutdown _start _get_headline _response) ],
 	],
   )->ID();
@@ -107,12 +106,13 @@ sub _response {
   undef;
 }
 
-1;
-__END__
+qq[Read all about it!];
 
-=head1 NAME
+=pod
 
-POE::Component::IRC::Plugin::RSS::Headlines - A POE::Component::IRC plugin that provides RSS headline retrieval.
+=for Pod::Coverage PCI_register PCI_unregister
+
+=cut
 
 =head1 SYNOPSIS
 
@@ -232,16 +232,6 @@ Has the following parameters:
   'ARG1', the error text;
 
 =back
-
-=head1 AUTHOR
-
-Chris 'BinGOs' Williams
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
